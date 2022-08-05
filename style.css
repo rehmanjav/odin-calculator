@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 600px;
+    width: 600px;
+    padding: 30px;
+}
+
+.display {
+    height: 60px;
+    width: 600px;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    height: 60px;
+    width: 60px;
+}
+
+.long {
+    width: 510px;
+}
+
+.short {
+    width: 70px;
+}
