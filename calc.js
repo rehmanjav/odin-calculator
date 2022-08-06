@@ -95,6 +95,21 @@ function num7 () {
                operand1.length < 28) {
                 operand1 += "7";
                 updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "7";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "7";
+                updateDisplay(".operand2", operand2);
     }
 
 }
@@ -113,6 +128,7 @@ let operator = "";
 let result = "";
 
 addListener(".num-7", num7);
+
 addListener(".clear", clear);
 
 addListener(".exp", exp);
