@@ -114,6 +114,307 @@ function num7 () {
 
 }
 
+function num8 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "8";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "8";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "8";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "8";
+                updateDisplay(".operand2", operand2);
+    }
+
+}
+
+function num9 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "9";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "9";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "9";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "9";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num4 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "4";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "4";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "4";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "4";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num5 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "5";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "5";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "5";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "5";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num6 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "6";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "6";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "6";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "6";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num1 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "1";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "1";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "1";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "1";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num2 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "2";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "2";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "2";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "2";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num3 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "3";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "3";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "3";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "3";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+function num0 () {
+    if (!operand1 &&
+        !operator && 
+        !operand2 &&
+        !result) {
+            operand1 += "0";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator && 
+               !operand2 &&
+               !result &&
+               operand1.length < 28) {
+                operand1 += "0";
+                updateDisplay(".operand1", operand1);
+    
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 += "0";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result &&
+               operand2.length < 25) {
+                operand2 += "0";
+                updateDisplay(".operand2", operand2);
+    }
+}
+
+
+
+
 
 
 
@@ -128,6 +429,15 @@ let operator = "";
 let result = "";
 
 addListener(".num-7", num7);
+addListener(".num-8", num8);
+addListener(".num-9", num9);
+addListener(".num-4", num4);
+addListener(".num-5", num5);
+addListener(".num-6", num6);
+addListener(".num-1", num1);
+addListener(".num-2", num2);
+addListener(".num-3", num3);
+addListener(".num-0", num0);
 
 addListener(".clear", clear);
 
