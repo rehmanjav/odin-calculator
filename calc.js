@@ -487,6 +487,12 @@ function decimal () {
     }
 }
 
+// TODO: backspace
+
+// TODO: sqrt
+
+// TODO: equals
+
 
 
 
@@ -524,4 +530,10 @@ addListener(".divide", divide);
 
 addListener(".negative", negative);
 addListener(".decimal", decimal);
+
+// TODO: backspace
+
+// TODO: sqrt
+
+// TODO: equals
 
