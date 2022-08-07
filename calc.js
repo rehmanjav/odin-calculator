@@ -412,6 +412,45 @@ function num0 () {
     }
 }
 
+function negative () {
+    if (operand1 &&
+        !operator &&
+        !operand2 &&
+        !result) {
+            if (operand1[0] != "-") {
+                operand1 = "-" + operand1;
+                updateDisplay(".operand1", operand1);
+            } else {
+                operand1 = operand1.slice(1);
+                updateDisplay(".operand1", operand1);
+            } 
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result) {
+                if (operand2[0] != "-") {
+                    operand2 = "-" + operand2;
+                    updateDisplay(".operand2", operand2);
+                } else {
+                    operand2 = operand2.slice(1);
+                    updateDisplay(".operand2", operand2);
+                }
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               result) {
+                if (result[0] != "-") {
+                    result = "-" + result;
+                    updateDisplay(".result", result);
+                } else {
+                    result = result.slice(1);
+                    updateDisplay(".result", result);
+                }
+    }
+}
+
 
 
 
@@ -446,4 +485,6 @@ addListener(".add", add);
 addListener(".subtract", subtract);
 addListener(".multiply", multiply);
 addListener(".divide", divide);
+
+addListener(".negative", negative);
 
