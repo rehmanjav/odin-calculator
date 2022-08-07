@@ -451,6 +451,42 @@ function negative () {
     }
 }
 
+function decimal () {
+    if (!operand1 &&
+        !operator &&
+        !operand2 &&
+        !result) {
+            operand1 = ".";
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               !operator &&
+               !operand2 &&
+               !result) {
+                if (!operand1.includes(".")) {
+                    operand1 += ".";
+                    updateDisplay(".operand1", operand1);
+                }
+
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operand2 = ".";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result) {
+                if (!operand2.includes(".")) {
+                    operand2 += ".";
+                    updateDisplay(".operand2", operand2);
+                }
+
+    }
+}
+
 
 
 
@@ -487,4 +523,5 @@ addListener(".multiply", multiply);
 addListener(".divide", divide);
 
 addListener(".negative", negative);
+addListener(".decimal", decimal);
 
