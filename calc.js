@@ -519,7 +519,51 @@ function backspace () {
     }
 }
 
-// TODO: sqrt
+function sqrt () {
+    if (operand1 &&
+        !operator &&
+        !operand2 &&
+        !result) {
+            if (!operand1.includes("-")) {
+                let num = +operand1;
+                num = num ** 0.5;
+                operand1 = num.toFixed(digits);
+                updateDisplay(".operand1", operand1);
+
+            } else {
+                alert("Can't find square root of a negative number.");
+            }
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result) {
+                if (!operand2.includes("-")) {
+                    let num = +operand2;
+                    num = num ** 0.5;
+                    operand2 = num.toFixed(digits);
+                    updateDisplay(".operand2", operand2);
+                } else {
+                    alert("Can't find square root of a negative number.");
+                }
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               result) {
+                if (!result.includes("-")) {
+                    let num = +result;
+                    num = num ** 0.5;
+                    clear();
+                    operand1 = num.toFixed(digits);
+                    updateDisplay(".operand1", operand1);
+
+                } else {
+                    alert("Can't find square root of a negative number.");
+                }
+
+    }
+}
 
 // TODO: equals
 
@@ -538,6 +582,7 @@ let operand1 = "";
 let operand2 = "";
 let operator = "";
 let result = "";
+let digits = 4;
 
 addListener(".num-7", num7);
 addListener(".num-8", num8);
@@ -561,8 +606,7 @@ addListener(".divide", divide);
 addListener(".negative", negative);
 addListener(".decimal", decimal);
 addListener(".backspace", backspace);
-
-// TODO: sqrt
+addListener(".sqrt", sqrt);
 
 // TODO: equals
 
