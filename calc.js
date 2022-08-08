@@ -565,12 +565,76 @@ function sqrt () {
     }
 }
 
-// TODO: equals
+function calcExp (a, b) {
+    let num1 = +a;
+    let num2 = +b;
+    let value = num1 ** num2;
+    return value.toFixed(digits);
 
+}
 
+function calcMultiply (a, b) {
+    let num1 = +a;
+    let num2 = +b;
+    let value = num1 * num2;
+    return value.toFixed(digits);
 
+}
 
+function calcDivide (a, b) {
+    let num1 = +a;
+    let num2 = +b;
+    let value = num1 / num2;
+    return value.toFixed(digits);
 
+}
+
+function calcSubtract (a, b) {
+    let num1 = +a;
+    let num2 = +b;
+    let value = num1 - num2;
+    return value.toFixed(digits);
+
+}
+
+function calcAdd (a, b) {
+    let num1 = +a;
+    let num2 = +b;
+    let value = num1 + num2;
+    return value.toFixed(digits);
+
+}
+
+function equals () {
+    if (operand1 &&
+        operator &&
+        operand2 &&
+        !result) {
+            if (operator == "+") {
+                result = calcAdd(operand1, operand2);
+                updateDisplay(".result", result);
+
+            } else if (operator == "-") {
+                result = calcSubtract(operand1, operand2);
+                updateDisplay(".result", result);
+
+            } else if (operator == "x") {
+                result = calcMultiply(operand1, operand2);
+                updateDisplay(".result", result);
+
+            } else if (operator == "÷") {
+                result = calcDivide(operand1, operand2);
+                updateDisplay(".result", result);
+
+            } else if (operator == "x^") {
+                result = calcExp(operand1, operand2);
+                updateDisplay(".result", result);
+
+            }
+
+    }
+
+}
 
 
 
@@ -582,7 +646,7 @@ let operand1 = "";
 let operand2 = "";
 let operator = "";
 let result = "";
-let digits = 4;
+let digits = 2;
 
 addListener(".num-7", num7);
 addListener(".num-8", num8);
@@ -607,6 +671,5 @@ addListener(".negative", negative);
 addListener(".decimal", decimal);
 addListener(".backspace", backspace);
 addListener(".sqrt", sqrt);
-
-// TODO: equals
+addListener(".equals", equals);
 
