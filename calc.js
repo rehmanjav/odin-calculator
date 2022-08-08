@@ -21,6 +21,30 @@ function add () {
             operator = "+";
             updateDisplay(".operator", operator);
 
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result) {
+                operand1 = calcAdd(operand1, operand2);
+                updateDisplay(".operand1", operand1);
+                operator = "+";
+                updateDisplay(".operator", operator);
+                operand2 = "";
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               result) {
+                operand1 = result;
+                operator = "+";
+                operand2 = "";
+                result = "";
+                updateDisplay(".operand1", operand1);
+                updateDisplay(".operator", operator);
+                updateDisplay(".operand2", operand2);
+                updateDisplay(".result", result);
+
     }
 }
 
