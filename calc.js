@@ -487,7 +487,37 @@ function decimal () {
     }
 }
 
-// TODO: backspace
+function backspace () {
+    if (operand1 &&
+        !operator &&
+        !operand2 &&
+        !result) {
+            operand1 = operand1.slice(0, -1);
+            updateDisplay(".operand1", operand1);
+
+    } else if (operand1 &&
+               operator &&
+               !operand2 &&
+               !result) {
+                operator = "";
+                updateDisplay(".operator", operator);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               !result) {
+                operand2 = operand2.slice(0, -1);
+                updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+               operator &&
+               operand2 &&
+               result) {
+                result = "";
+                updateDisplay(".result", result);
+
+    }
+}
 
 // TODO: sqrt
 
@@ -530,8 +560,7 @@ addListener(".divide", divide);
 
 addListener(".negative", negative);
 addListener(".decimal", decimal);
-
-// TODO: backspace
+addListener(".backspace", backspace);
 
 // TODO: sqrt
 
