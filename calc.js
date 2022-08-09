@@ -10,6 +10,31 @@ function exp () {
             operator = "x^";
             updateDisplay(".operator", operator);
 
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        !result) {
+        operand1 = calcMap[operator](operand1, operand2);
+        updateDisplay(".operand1", operand1);
+         
+        operator = "x^";
+        updateDisplay(".operator", operator);
+        operand2 = "";
+        updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        result) {
+         operand1 = result;
+         operator = "x^";
+         operand2 = "";
+         result = "";
+         updateDisplay(".operand1", operand1);
+         updateDisplay(".operator", operator);
+         updateDisplay(".operand2", operand2);
+         updateDisplay(".result", result);
+
     }
 }
 
@@ -25,8 +50,12 @@ function add () {
                operator &&
                operand2 &&
                !result) {
-                operand1 = calcAdd(operand1, operand2);
+                // operand1 = calcAdd(operand1, operand2);
+                // updateDisplay(".operand1", operand1);
+
+                operand1 = calcMap[operator](operand1, operand2);
                 updateDisplay(".operand1", operand1);
+                
                 operator = "+";
                 updateDisplay(".operator", operator);
                 operand2 = "";
@@ -56,6 +85,31 @@ function subtract () {
             operator = "-";
             updateDisplay(".operator", operator);
 
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        !result) {
+         operand1 = calcMap[operator](operand1, operand2);
+         updateDisplay(".operand1", operand1);
+         
+         operator = "-";
+         updateDisplay(".operator", operator);
+         operand2 = "";
+         updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        result) {
+         operand1 = result;
+         operator = "-";
+         operand2 = "";
+         result = "";
+         updateDisplay(".operand1", operand1);
+         updateDisplay(".operator", operator);
+         updateDisplay(".operand2", operand2);
+         updateDisplay(".result", result);
+
     }
 }
 
@@ -67,6 +121,31 @@ function multiply () {
             operator = "x";
             updateDisplay(".operator", operator);
 
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        !result) {
+         operand1 = calcMap[operator](operand1, operand2);
+         updateDisplay(".operand1", operand1);
+         
+         operator = "x";
+         updateDisplay(".operator", operator);
+         operand2 = "";
+         updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        result) {
+         operand1 = result;
+         operator = "x";
+         operand2 = "";
+         result = "";
+         updateDisplay(".operand1", operand1);
+         updateDisplay(".operator", operator);
+         updateDisplay(".operand2", operand2);
+         updateDisplay(".result", result);
+
     }
 }
 
@@ -77,6 +156,31 @@ function divide () {
         !result) {
             operator = "÷";
             updateDisplay(".operator", operator);
+
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        !result) {
+         operand1 = calcMap[operator](operand1, operand2);
+         updateDisplay(".operand1", operand1);
+         
+         operator = "÷";
+         updateDisplay(".operator", operator);
+         operand2 = "";
+         updateDisplay(".operand2", operand2);
+
+    } else if (operand1 &&
+        operator &&
+        operand2 &&
+        result) {
+         operand1 = result;
+         operator = "÷";
+         operand2 = "";
+         result = "";
+         updateDisplay(".operand1", operand1);
+         updateDisplay(".operator", operator);
+         updateDisplay(".operand2", operand2);
+         updateDisplay(".result", result);
 
     }
 }
@@ -671,6 +775,14 @@ let operand2 = "";
 let operator = "";
 let result = "";
 let digits = 2;
+
+let calcMap = {
+    "+": calcAdd,
+    "-": calcSubtract,
+    "x": calcMultiply,
+    "÷": calcDivide,
+    "x^": calcExp,
+};
 
 addListener(".num-7", num7);
 addListener(".num-8", num8);
