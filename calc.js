@@ -655,9 +655,13 @@ function sqrt () {
             if (!operand1.includes("-")) {
                 let num = +operand1;
                 num = num ** 0.5;
-                operand1 = num.toFixed(digits);
-                updateDisplay(".operand1", operand1);
-
+                if (!Number.isInteger(num)) {
+                    operand1 = num.toFixed(digits);
+                    updateDisplay(".operand1", operand1);
+                } else {
+                    operand1 = num.toString();
+                    updateDisplay(".operand1", operand1);
+                }
             } else {
                 alert("Can't find square root of a negative number.");
             }
@@ -669,8 +673,14 @@ function sqrt () {
                 if (!operand2.includes("-")) {
                     let num = +operand2;
                     num = num ** 0.5;
-                    operand2 = num.toFixed(digits);
-                    updateDisplay(".operand2", operand2);
+                    if (!Number.isInteger(num)) {
+                        operand2 = num.toFixed(digits);
+                        updateDisplay(".operand2", operand2);
+                    } else {
+                        operand2 = num.toString();
+                        updateDisplay(".operand2", operand2);
+                    }
+                    
                 } else {
                     alert("Can't find square root of a negative number.");
                 }
@@ -683,8 +693,14 @@ function sqrt () {
                     let num = +result;
                     num = num ** 0.5;
                     clear();
-                    operand1 = num.toFixed(digits);
-                    updateDisplay(".operand1", operand1);
+                    if (!Number.isInteger(num)) {
+                        operand1 = num.toFixed(digits);
+                        updateDisplay(".operand1", operand1);
+                    } else {
+                        operand1 = num.toString();
+                        updateDisplay(".operand1", operand1);
+                    }
+                    
 
                 } else {
                     alert("Can't find square root of a negative number.");
@@ -697,40 +713,55 @@ function calcExp (a, b) {
     let num1 = +a;
     let num2 = +b;
     let value = num1 ** num2;
-    return value.toFixed(digits);
-
+    if (!Number.isInteger(value)) {
+        return value.toFixed(digits);
+    } else {
+        return value.toString();
+    }
 }
 
 function calcMultiply (a, b) {
     let num1 = +a;
     let num2 = +b;
     let value = num1 * num2;
-    return value.toFixed(digits);
-
+    if (!Number.isInteger(value)) {
+        return value.toFixed(digits);
+    } else {
+        return value.toString();
+    }
 }
 
 function calcDivide (a, b) {
     let num1 = +a;
     let num2 = +b;
     let value = num1 / num2;
-    return value.toFixed(digits);
-
+    if (!Number.isInteger(value)) {
+        return value.toFixed(digits);
+    } else {
+        return value.toString();
+    }
 }
 
 function calcSubtract (a, b) {
     let num1 = +a;
     let num2 = +b;
     let value = num1 - num2;
-    return value.toFixed(digits);
-
+    if (!Number.isInteger(value)) {
+        return value.toFixed(digits);
+    } else {
+        return value.toString();
+    }
 }
 
 function calcAdd (a, b) {
     let num1 = +a;
     let num2 = +b;
     let value = num1 + num2;
-    return value.toFixed(digits);
-
+    if (!Number.isInteger(value)) {
+        return value.toFixed(digits);
+    } else {
+        return value.toString();
+    }
 }
 
 function equals () {
